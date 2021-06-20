@@ -1,0 +1,24 @@
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#grid {
+  width: 800px;
+  height: 800px;
+  border: 1px solid red;
+}
+
+.cell {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.cell:hover {
+  background-color: black;
+}
+.cell-red {
+  background-color: red;
+}
