@@ -4,9 +4,14 @@
   padding: 0;
 }
 
+.container-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .container {
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   display: grid;
   border: 1px solid black;
   border-radius: 5px;
