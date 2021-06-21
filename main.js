@@ -1,10 +1,8 @@
 const container = document.querySelector(".container");
-const lowButton = document.querySelector(".low-button");
-const medButton = document.querySelector(".medium-button");
-const highButton = document.querySelector(".high-button");
+const pixelButtons = document.querySelectorAll(".pixel-option");
 const colorButtons = document.querySelectorAll(".color-option");
 const clearButton = document.querySelector(".clear-button");
-let color = "black";
+let color;
 
 // default grid size on load
 createGrid(64);
@@ -33,6 +31,17 @@ function colorPixel() {
   }
 }
 
+// pixel size
+function pixelOption(e) {
+  if (e.target.dataset.pixel == "32px") {
+    createGrid(32);
+  } else if (e.target.dataset.pixel == "64px") {
+    createGrid(64);
+  } else if (e.target.dataset.pixel == "128px") {
+    createGrid(128);
+  }
+}
+
 // clicked color
 function colorOption(e) {
   if (e.target.dataset.color == "red") {
@@ -42,6 +51,12 @@ function colorOption(e) {
   } else {
     color = "black";
   }
+}
+
+//  clear canvas
+function clearCanvas() {
+  const div = container.querySelectorAll("div");
+  div.forEach((pixel) => (pixel.style.backgroundColor = "white"));
 }
 
 // reset pixel size
@@ -54,3 +69,9 @@ function pixelReset() {
 colorButtons.forEach((colorButton) =>
   colorButton.addEventListener("click", colorOption)
 );
+
+pixelButtons.forEach((pixelButton) =>
+  pixelButton.addEventListener("click", pixelOption)
+);
+
+clearButton.addEventListener("click", clearCanvas);
