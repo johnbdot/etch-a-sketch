@@ -21,14 +21,22 @@ function createGrid(num) {
 }
 
 // color the pixel
+
 function colorPixel() {
   if (color == "red") {
     this.style.backgroundColor = "red";
+  } else if (color == "rainbow") {
+    this.style.backgroundColor = `rgb(${rainbow()},${rainbow()},${rainbow()})`;
   } else if (color == "white") {
     this.style.backgroundColor = "white";
   } else {
     this.style.backgroundColor = "black";
   }
+}
+
+function rainbow() {
+  const value = Math.floor(Math.random() * 255);
+  return value;
 }
 
 // pixel size
@@ -46,6 +54,8 @@ function pixelOption(e) {
 function colorOption(e) {
   if (e.target.dataset.color == "red") {
     color = "red";
+  } else if (e.target.dataset.color == "rainbow") {
+    color = "rainbow";
   } else if (e.target.dataset.color == "white") {
     color = "white";
   } else {
