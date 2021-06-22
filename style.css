@@ -7,6 +7,13 @@
 .container-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 1000px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid purple;
 }
 
 .container {
@@ -15,4 +22,8 @@
   display: grid;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.buttons {
+  margin-left: 10px;
 }
