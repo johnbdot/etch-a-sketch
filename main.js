@@ -18,6 +18,7 @@ function createGrid(num) {
   }
   const div = container.querySelectorAll("div");
   div.forEach((pixel) => pixel.addEventListener("mouseover", colorPixel));
+  div.forEach((pixel) => (pixel.style.backgroundColor = "white"));
 }
 
 // color the pixel
