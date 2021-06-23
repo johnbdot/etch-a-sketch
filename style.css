@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 
 * {
   box-sizing: 0;
@@ -9,7 +11,7 @@
 
 body {
   color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   background-color: #f7ea00;
 }
 
@@ -37,7 +39,7 @@ a:visited {
 }
 
 .container-wrapper {
-  width: 1050px;
+  width: 1080px;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -86,7 +88,7 @@ p {
 .contact {
   z-index: -999;
   position: relative;
-  padding-top: 290px;
+  padding-top: 300px;
   text-align: center;
 }
 
