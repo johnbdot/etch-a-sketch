@@ -5,7 +5,7 @@ const clearButton = document.querySelector(".clear-button");
 let color;
 
 // default grid size on load
-createGrid();
+createGrid(64);
 
 // create grid
 function createGrid(num) {
